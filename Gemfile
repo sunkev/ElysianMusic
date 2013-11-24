@@ -59,4 +59,4 @@ end
 gem 'database_cleaner', '~> 1.1.1'
 gem 'zurb-foundation'
 gem 'simple_form'
-
+gem 'devise'
