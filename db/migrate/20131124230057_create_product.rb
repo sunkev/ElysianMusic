@@ -3,6 +3,7 @@ class CreateProduct < ActiveRecord::Migration
     create_table :products do |t|
       t.string   :brand,        null: false
       t.string   :model,        null: false
+      t.string   :product_photo
       t.text     :description
       t.decimal  :price,        null: false, precision: 7, scale: 2
     end

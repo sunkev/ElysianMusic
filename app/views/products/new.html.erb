@@ -9,7 +9,7 @@
       <%= f.input :model, label: false,  required: true, placeholder: 'Model', inline_label: "Model" %>
       <%= f.input :description, label: false,  required: true, placeholder: 'Description', inline_label: "Description" %>
       <%= f.input :price, label: false,  required: true, placeholder: 'Price', inline_label: "Price" %>
-
+      <%= f.file_field :product_photo, label: false,  required: false %>
       <%= f.button :submit, "Create Product" %>
     </div>
     <% end %>

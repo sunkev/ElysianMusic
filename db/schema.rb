@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 20131124230057) do
   enable_extension "plpgsql"
 
   create_table "products", force: true do |t|
-    t.string  "brand",                               null: false
-    t.string  "model",                               null: false
+    t.string  "brand",                                 null: false
+    t.string  "model",                                 null: false
+    t.string  "product_photo"
     t.text    "description"
-    t.decimal "price",       precision: 7, scale: 2, null: false
+    t.decimal "price",         precision: 7, scale: 2, null: false
   end
 
   create_table "users", force: true do |t|
