@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_filter :authenticate_admin!, except: [:index]
+
   def new
     @product = Product.new
   end
