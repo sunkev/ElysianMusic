@@ -12,7 +12,7 @@ feature 'Admin creates a product' do
     fill_in 'Password', with: admin.password
     click_button 'Sign in'
 
-    visit new_lesson_path
+    visit new_product_path
     fill_in 'Brand', with: 'Di Zhao Flutes'
     fill_in 'Model', with: 'X2F-SD3'
     fill_in 'Description', with: "The best"
@@ -28,7 +28,7 @@ feature 'Admin creates a product' do
     fill_in 'Password', with: admin.password
     click_button 'Sign in'
 
-    visit new_lesson_path
+    visit new_product_path
     click_button 'Create Product'
     expect(page).to have_content('Product was not created')
   end
@@ -40,7 +40,7 @@ feature 'Admin creates a product' do
     fill_in 'Password', with: user.password
     click_button 'Sign in'
 
-    visit new_lesson_path
-    expect(page).to_not have_content('Create Product')
+    visit new_product_path
+    expect(page).to_not have_content('Make a product')
   end
 end
