@@ -3,6 +3,6 @@
   <%= product.model %>
   <%= product.description %>
   <%= product.price %>
-  <%= image_tag product.product_photo.url %>
+  <%= link_to image_tag(product.product_photo.url), product_path(product) %>
 <% end %>
 

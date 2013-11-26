@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   before_filter :authenticate_admin!, except: [:index]
 
+  def index
+    @products = Product.all
+  end
+
   def new
     @product = Product.new
   end
@@ -16,8 +20,8 @@ class ProductsController < ApplicationController
     end
   end
 
-  def index
-    @products = Product.all
+  def show
+    @product = Product.find(params[:id])
   end
 
   private
