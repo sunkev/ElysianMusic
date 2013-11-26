@@ -1,0 +1,8 @@
+<% @products.each do  |product| %>
+  <%= product.brand %>
+  <%= product.model %>
+  <%= product.description %>
+  <%= product.price %>
+  <%= image_tag product.product_photo.url %>
+<% end %>
+
